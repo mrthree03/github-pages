@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tỏ Tình Siêu Lầy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding-top: 100px;
+        }
+        h1 {
+            color: #ff3366;
+            font-size: 36px;
+        }
+        p {
+            font-size: 20px;
+            color: #333;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yesBtn {
+            background-color: #66cc66;
+            color: white;
+        }
+        #noBtn {
+            background-color: #ff6666;
+            color: white;
+            position: relative;
+            transition: all 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anh Thích Em Nhiều Lắm!</h1>
+    <p>Em làm người yêu anh nhé, không là anh khóc to cho coi! 😜</p>
+    
+    <button class="button" id="yesBtn" onclick="alert('Yay! Anh biết ngay mà, em cũng thích anh đúng hong? ❤️')">Đồng ý</button>
+    <button class="button" id="noBtn" onmouseover="moveButton()">Không</button>
+
+    <script>
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            const maxX = window.innerWidth - noBtn.offsetWidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
+            noBtn.style.left = newX + 'px';
+            noBtn.style.top = newY + 'px';
+            noBtn.style.position = 'absolute';
+        }
+    </script>
+</body>
+</html>
